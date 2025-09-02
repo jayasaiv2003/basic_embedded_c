@@ -7,7 +7,7 @@
 // Function to simulate a delay (blocking delay)
 void delay_ms(int ms) {
     volatile long i, j; 	// Use volatile to prevent optimization
-    for(int i=0;i<ms;i++)
+    for(int i=0;i<1000*ms;i++)
     {
         i++;
     }
@@ -17,9 +17,9 @@ void delay_ms(int ms) {
 void long_delay(int ms)
 {
     volatile long i,j;
-    for(int i=0;i<1000;i++)
+    for(int i=0;i<100000;i++)
     {
-        for(int j=0;j<1000;j++)
+        for(int j=0;j<100000;j++)
         {
 
         }
@@ -84,4 +84,5 @@ int main() {
     printf("Liftoff!\n");
 
     return 0; 	// Indicate successful execution
+
 } 
